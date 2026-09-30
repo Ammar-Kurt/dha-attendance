@@ -10,33 +10,206 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApprovalsRouteImport } from './routes/approvals'
+import { Route as AttendanceRouteImport } from './routes/attendance'
+import { Route as AuditLogRouteImport } from './routes/audit-log'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as EmployeesRouteImport } from './routes/employees'
+import { Route as LeaveRouteImport } from './routes/leave'
+import { Route as LeaveHolidaysRouteImport } from './routes/leave-holidays'
+import { Route as NotificationsRouteImport } from './routes/notifications'
+import { Route as OrganizationRouteImport } from './routes/organization'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as ReportsRouteImport } from './routes/reports'
+import { Route as TeamAttendanceRouteImport } from './routes/team-attendance'
+import { Route as UsersRouteImport } from './routes/users'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApprovalsRoute = ApprovalsRouteImport.update({
+  id: '/approvals',
+  path: '/approvals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AttendanceRoute = AttendanceRouteImport.update({
+  id: '/attendance',
+  path: '/attendance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuditLogRoute = AuditLogRouteImport.update({
+  id: '/audit-log',
+  path: '/audit-log',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmployeesRoute = EmployeesRouteImport.update({
+  id: '/employees',
+  path: '/employees',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeaveRoute = LeaveRouteImport.update({
+  id: '/leave',
+  path: '/leave',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeaveHolidaysRoute = LeaveHolidaysRouteImport.update({
+  id: '/leave-holidays',
+  path: '/leave-holidays',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificationsRoute = NotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrganizationRoute = OrganizationRouteImport.update({
+  id: '/organization',
+  path: '/organization',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportsRoute = ReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamAttendanceRoute = TeamAttendanceRouteImport.update({
+  id: '/team-attendance',
+  path: '/team-attendance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UsersRoute = UsersRouteImport.update({
+  id: '/users',
+  path: '/users',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/approvals': typeof ApprovalsRoute
+  '/attendance': typeof AttendanceRoute
+  '/audit-log': typeof AuditLogRoute
+  '/dashboard': typeof DashboardRoute
+  '/employees': typeof EmployeesRoute
+  '/leave': typeof LeaveRoute
+  '/leave-holidays': typeof LeaveHolidaysRoute
+  '/notifications': typeof NotificationsRoute
+  '/organization': typeof OrganizationRoute
+  '/profile': typeof ProfileRoute
+  '/reports': typeof ReportsRoute
+  '/team-attendance': typeof TeamAttendanceRoute
+  '/users': typeof UsersRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/approvals': typeof ApprovalsRoute
+  '/attendance': typeof AttendanceRoute
+  '/audit-log': typeof AuditLogRoute
+  '/dashboard': typeof DashboardRoute
+  '/employees': typeof EmployeesRoute
+  '/leave': typeof LeaveRoute
+  '/leave-holidays': typeof LeaveHolidaysRoute
+  '/notifications': typeof NotificationsRoute
+  '/organization': typeof OrganizationRoute
+  '/profile': typeof ProfileRoute
+  '/reports': typeof ReportsRoute
+  '/team-attendance': typeof TeamAttendanceRoute
+  '/users': typeof UsersRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/approvals': typeof ApprovalsRoute
+  '/attendance': typeof AttendanceRoute
+  '/audit-log': typeof AuditLogRoute
+  '/dashboard': typeof DashboardRoute
+  '/employees': typeof EmployeesRoute
+  '/leave': typeof LeaveRoute
+  '/leave-holidays': typeof LeaveHolidaysRoute
+  '/notifications': typeof NotificationsRoute
+  '/organization': typeof OrganizationRoute
+  '/profile': typeof ProfileRoute
+  '/reports': typeof ReportsRoute
+  '/team-attendance': typeof TeamAttendanceRoute
+  '/users': typeof UsersRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/approvals'
+    | '/attendance'
+    | '/audit-log'
+    | '/dashboard'
+    | '/employees'
+    | '/leave'
+    | '/leave-holidays'
+    | '/notifications'
+    | '/organization'
+    | '/profile'
+    | '/reports'
+    | '/team-attendance'
+    | '/users'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/approvals'
+    | '/attendance'
+    | '/audit-log'
+    | '/dashboard'
+    | '/employees'
+    | '/leave'
+    | '/leave-holidays'
+    | '/notifications'
+    | '/organization'
+    | '/profile'
+    | '/reports'
+    | '/team-attendance'
+    | '/users'
+  id:
+    | '__root__'
+    | '/'
+    | '/approvals'
+    | '/attendance'
+    | '/audit-log'
+    | '/dashboard'
+    | '/employees'
+    | '/leave'
+    | '/leave-holidays'
+    | '/notifications'
+    | '/organization'
+    | '/profile'
+    | '/reports'
+    | '/team-attendance'
+    | '/users'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ApprovalsRoute: typeof ApprovalsRoute
+  AttendanceRoute: typeof AttendanceRoute
+  AuditLogRoute: typeof AuditLogRoute
+  DashboardRoute: typeof DashboardRoute
+  EmployeesRoute: typeof EmployeesRoute
+  LeaveRoute: typeof LeaveRoute
+  LeaveHolidaysRoute: typeof LeaveHolidaysRoute
+  NotificationsRoute: typeof NotificationsRoute
+  OrganizationRoute: typeof OrganizationRoute
+  ProfileRoute: typeof ProfileRoute
+  ReportsRoute: typeof ReportsRoute
+  TeamAttendanceRoute: typeof TeamAttendanceRoute
+  UsersRoute: typeof UsersRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +221,115 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/approvals': {
+      id: '/approvals'
+      path: '/approvals'
+      fullPath: '/approvals'
+      preLoaderRoute: typeof ApprovalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/attendance': {
+      id: '/attendance'
+      path: '/attendance'
+      fullPath: '/attendance'
+      preLoaderRoute: typeof AttendanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/audit-log': {
+      id: '/audit-log'
+      path: '/audit-log'
+      fullPath: '/audit-log'
+      preLoaderRoute: typeof AuditLogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/employees': {
+      id: '/employees'
+      path: '/employees'
+      fullPath: '/employees'
+      preLoaderRoute: typeof EmployeesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leave': {
+      id: '/leave'
+      path: '/leave'
+      fullPath: '/leave'
+      preLoaderRoute: typeof LeaveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leave-holidays': {
+      id: '/leave-holidays'
+      path: '/leave-holidays'
+      fullPath: '/leave-holidays'
+      preLoaderRoute: typeof LeaveHolidaysRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notifications': {
+      id: '/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof NotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/organization': {
+      id: '/organization'
+      path: '/organization'
+      fullPath: '/organization'
+      preLoaderRoute: typeof OrganizationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reports': {
+      id: '/reports'
+      path: '/reports'
+      fullPath: '/reports'
+      preLoaderRoute: typeof ReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/team-attendance': {
+      id: '/team-attendance'
+      path: '/team-attendance'
+      fullPath: '/team-attendance'
+      preLoaderRoute: typeof TeamAttendanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/users': {
+      id: '/users'
+      path: '/users'
+      fullPath: '/users'
+      preLoaderRoute: typeof UsersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ApprovalsRoute: ApprovalsRoute,
+  AttendanceRoute: AttendanceRoute,
+  AuditLogRoute: AuditLogRoute,
+  DashboardRoute: DashboardRoute,
+  EmployeesRoute: EmployeesRoute,
+  LeaveRoute: LeaveRoute,
+  LeaveHolidaysRoute: LeaveHolidaysRoute,
+  NotificationsRoute: NotificationsRoute,
+  OrganizationRoute: OrganizationRoute,
+  ProfileRoute: ProfileRoute,
+  ReportsRoute: ReportsRoute,
+  TeamAttendanceRoute: TeamAttendanceRoute,
+  UsersRoute: UsersRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
