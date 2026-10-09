@@ -11,5 +11,8 @@
 
 ## Project decisions
 
-- Keep DHA Attendance frontend-only with mock data and in-memory React state, because the current scope explicitly excludes persistence and real authentication.
-- Use one shared DHA application shell across leaf routes, because role-aware navigation and temporary state must remain consistent while browsing.
+- DHA Attendance runs on live Supabase data only (Assignment 2). Mock data and in-memory demo state were removed; every screen reads and writes its table through `@/integrations/supabase/client`.
+- Authentication is Supabase email/password. Protected routes use `ssr: false` and the `Protected` wrapper in `src/components/shell.tsx`, because the session lives in the browser.
+- Roles are stored in `user_roles`, never on `profiles`, and enforced by RLS through the `has_role` / `is_staff` / `is_admin` security-definer functions. The first sign-up becomes `system_admin`.
+- Schema changes go through SQL files in `supabase/migrations/` (UUID keys, timestamps and RLS on every table); `src/integrations/supabase/types.ts` mirrors them by hand.
+- Use one shared application shell across leaf routes, because role-aware navigation must remain consistent while browsing.
