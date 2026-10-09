@@ -242,7 +242,7 @@ export function LeavePage() {
           r.status === "approved" &&
           r.start_date.startsWith(String(year)),
       )
-      .reduce((s, r) => s + r.days, 0);
+      .reduce((s, r) => s + (r.days ?? 0), 0);
     return { ...t, used, remaining: Math.max(0, t.annual_quota - used) };
   });
   const icons = [Palmtree, Activity, CalendarDays] as const;

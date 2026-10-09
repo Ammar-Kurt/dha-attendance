@@ -67,7 +67,7 @@ export function ReportsPage() {
       const minutes = mine.reduce((sum, r) => sum + minutesBetween(r.check_in, r.check_out), 0);
       const leaveDays = (leave.data ?? [])
         .filter((l) => l.user_id === p.id)
-        .reduce((s, l) => s + l.days, 0);
+        .reduce((s, l) => s + (l.days ?? 0), 0);
       return {
         code: p.employee_code,
         name: p.full_name,
