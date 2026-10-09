@@ -1,0 +1,43 @@
+PASS  Sign-up creates profiles row (trigger) — DHA-1046
+PASS  First account becomes system_admin — system_admin
+PASS  Second account becomes employee — employee
+PASS  Wrong password is rejected — Invalid login credentials
+PASS  Correct password signs in
+PASS  Seeded departments readable by employee — Finance, Human Resources, Operations
+PASS  Seeded shifts + leave types readable
+PASS  UPDATE own profile — Operations Executive
+PASS  updated_at trigger bumps on update
+PASS  Employee cannot change own is_active (trigger) — Only HR or system administrators can change employee code, email, stat
+PASS  CREATE attendance record — 88723d7e-06d3-4cc9-a964-e495566b26a2
+PASS  READ attendance record back
+PASS  UPDATE attendance record (check-out)
+PASS  Duplicate (user, date) is rejected by unique constraint — 23505
+PASS  Bulk insert 5 history records
+PASS  DELETE attendance record
+PASS  CREATE leave request
+PASS  Generated column days = 3 — 3
+PASS  Reason shorter than 10 chars rejected by check constraint — 23514
+PASS  UPDATE own pending leave request
+PASS  Staff can read employee's leave request
+PASS  Admin APPROVES leave request
+PASS  Related table: approval inserted a notification for employee (trigger) — Leave request approved
+PASS  Related table: approval wrote an audit_logs row with FK to reviewer
+PASS  Employee cannot delete an approved request (RLS) — rows affected: 0
+PASS  DELETE own pending leave request (cancel)
+PASS  CREATE correction request
+PASS  Related table: approved correction created attendance record (trigger) — Corrected via request 08217897-6f35-4d19-936c-3bc6e3703a55
+PASS  RLS: employee cannot read another user's profile — rows: 0
+PASS  RLS: employee sees only own profile in a full select — rows: 1
+PASS  RLS: admin can read the whole directory — rows: 2
+PASS  RLS: employee cannot update another user's profile — rows affected: 0
+PASS  RLS: employee cannot insert attendance for someone else — new row violates row-level security policy for table "attend
+PASS  RLS: employee cannot escalate own role — rows affected: 0
+PASS  RLS: employee cannot read another user's notifications
+PASS  RLS: employee cannot create a department — new row violates row-level security policy for table "depart
+PASS  RLS: anonymous visitor sees no profiles
+PASS  RLS: anonymous visitor sees no departments
+PASS  Admin CREATE department
+PASS  Sign-out clears the session
+PASS  Signed-out client gets no rows
+
+41/41 checks passed
