@@ -30,7 +30,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
-import type { LeaveRequestRow } from "@/integrations/supabase/types";
+import type { LeaveRequestRow } from "@/lib/db-types";
 import { useAuth } from "@/lib/auth";
 import { formatRange, getErrorMessage } from "@/lib/format";
 import { unwrap, useLeaveTypes } from "@/lib/queries";

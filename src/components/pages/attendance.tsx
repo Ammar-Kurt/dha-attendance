@@ -29,7 +29,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
-import type { AttendanceRow, AttendanceStatus } from "@/integrations/supabase/types";
+import type { AttendanceRow, AttendanceStatus } from "@/lib/db-types";
 import { useAuth } from "@/lib/auth";
 import {
   formatDate,

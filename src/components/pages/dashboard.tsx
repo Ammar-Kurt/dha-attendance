@@ -24,7 +24,7 @@ import {
 import { AppShell } from "@/components/shell";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
-import type { AttendanceRow, ShiftRow } from "@/integrations/supabase/types";
+import type { AttendanceRow, ShiftRow } from "@/lib/db-types";
 import { useAuth } from "@/lib/auth";
 import {
   formatClock,

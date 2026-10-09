@@ -10,7 +10,7 @@ import {
   type ReactNode,
 } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import type { AppRole, ProfileRow } from "@/integrations/supabase/types";
+import type { AppRole, ProfileRow } from "@/lib/db-types";
 
 export const roleLabels: Record<AppRole, string> = {
   employee: "Employee",

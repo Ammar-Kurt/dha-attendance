@@ -1,7 +1,7 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import type { PostgrestSingleResponse } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
-import type { Json, ProfileRow, UserRoleRow } from "@/integrations/supabase/types";
+import type { Json, ProfileRow, UserRoleRow } from "@/lib/db-types";
 import { useAuth } from "@/lib/auth";
 
 /** Throws Supabase errors so react-query surfaces them in the error state. */
