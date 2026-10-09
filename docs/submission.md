@@ -3,7 +3,7 @@
 | Item | Where |
 | --- | --- |
 | Lovable app | https://lovable.dev/projects/f7ded613-d439-4afe-a282-bc724a6799de |
-| GitHub repo | https://github.com/Ammar-Kurt/create-an-app-according-to-the-given-skeleton-requirement-requirement-create-the-main-pages... |
+| GitHub repo | https://github.com/Ammar-Kurt/dha-attendance |
 | Supabase project ref | `bkfxjanxthmyezixovsh` |
 | Database plan (Step 5) | `docs/database-plan.md` |
 | Lovable prompts (Step 6) | `docs/lovable-prompts.md` |
