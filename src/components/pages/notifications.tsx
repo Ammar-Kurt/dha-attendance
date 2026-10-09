@@ -6,7 +6,7 @@ import { ConfirmDialog, EmptyState, QueryState, Section } from "@/components/dat
 import { AppShell } from "@/components/shell";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
-import type { NotificationRow } from "@/integrations/supabase/types";
+import type { NotificationRow } from "@/lib/db-types";
 import { useAuth } from "@/lib/auth";
 import { formatDateTime, getErrorMessage } from "@/lib/format";
 import { unwrap } from "@/lib/queries";

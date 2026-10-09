@@ -30,7 +30,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
-import type { LeaveRequestRow } from "@/integrations/supabase/types";
+import type { LeaveRequestRow } from "@/lib/db-types";
 import { useAuth } from "@/lib/auth";
 import { formatRange, getErrorMessage } from "@/lib/format";
 import { unwrap, useLeaveTypes } from "@/lib/queries";
@@ -242,7 +242,7 @@ export function LeavePage() {
           r.status === "approved" &&
           r.start_date.startsWith(String(year)),
       )
-      .reduce((s, r) => s + r.days, 0);
+      .reduce((s, r) => s + (r.days ?? 0), 0);
     return { ...t, used, remaining: Math.max(0, t.annual_quota - used) };
   });
   const icons = [Palmtree, Activity, CalendarDays] as const;

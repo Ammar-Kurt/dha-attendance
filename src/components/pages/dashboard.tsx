@@ -24,7 +24,7 @@ import {
 import { AppShell } from "@/components/shell";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
-import type { AttendanceRow, ShiftRow } from "@/integrations/supabase/types";
+import type { AttendanceRow, ShiftRow } from "@/lib/db-types";
 import { useAuth } from "@/lib/auth";
 import {
   formatClock,
@@ -143,7 +143,7 @@ function useLeaveBalance() {
   const balances = (leaveTypes.data ?? []).map((t) => {
     const used = (approved.data ?? [])
       .filter((r) => r.leave_type_id === t.id)
-      .reduce((sum, r) => sum + r.days, 0);
+      .reduce((sum, r) => sum + (r.days ?? 0), 0);
     return { ...t, used, remaining: Math.max(0, t.annual_quota - used) };
   });
   return { balances, isLoading: leaveTypes.isLoading || approved.isLoading };

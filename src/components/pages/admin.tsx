@@ -34,7 +34,7 @@ import type {
   HolidayRow,
   LeaveTypeRow,
   ShiftRow,
-} from "@/integrations/supabase/types";
+} from "@/lib/db-types";
 import { roleLabels, useAuth } from "@/lib/auth";
 import { formatClock, formatDate, formatDateTime, getErrorMessage } from "@/lib/format";
 import {

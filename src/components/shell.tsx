@@ -24,7 +24,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { supabase } from "@/integrations/supabase/client";
-import type { AppRole } from "@/integrations/supabase/types";
+import type { AppRole } from "@/lib/db-types";
 import { roleLabels, useAuth } from "@/lib/auth";
 import { initials } from "@/lib/format";
 import { cn } from "@/lib/utils";
