@@ -22,6 +22,20 @@
       "when": 1791561181640,
       "tag": "0002_notifications_and_audit",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1791561194524,
+      "tag": "0003_seed_reference_data",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1791561202557,
+      "tag": "0004_grant_data_api_access",
+      "breakpoints": true
     }
   ]
 }
