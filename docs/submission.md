@@ -38,5 +38,15 @@
 - [x] Mock data replaced by live Supabase queries with loading / empty / error / success states
 - [x] Create, read, update, delete and related-table tests passed (41/41)
 - [x] Desktop and mobile layouts checked
-- [ ] Connect the Supabase project inside Lovable (Lovable → Supabase button → select project `bkfxjanxthmyezixovsh`)
+- [ ] Point Lovable at this Supabase project (see note below)
 - [ ] Capture the Supabase dashboard screenshots listed above
+
+## Note on Lovable Cloud
+
+When Supabase was first connected from the Lovable editor, Lovable enabled **Lovable Cloud** (its
+managed backend, project `cfflqukiqxldwzfqzcsj`) and copied the migrations into `drizzle/migrations/`.
+The app has since been pointed back at the student's own Supabase project `bkfxjanxthmyezixovsh`
+through `.env` and `supabase/config.toml`, where all tests and screenshots were produced. The
+`drizzle/` folder is Lovable's record of the same schema and can be ignored. To make the Lovable
+preview use the same project, disconnect Lovable Cloud (Cloud tab → settings) or connect the
+external project under **Settings → Integrations → Supabase**.
