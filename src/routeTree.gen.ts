@@ -21,6 +21,8 @@ import { Route as NotificationsRouteImport } from './routes/notifications'
 import { Route as OrganizationRouteImport } from './routes/organization'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as ReportsRouteImport } from './routes/reports'
+import { Route as SignInRouteImport } from './routes/sign-in'
+import { Route as SignUpRouteImport } from './routes/sign-up'
 import { Route as TeamAttendanceRouteImport } from './routes/team-attendance'
 import { Route as UsersRouteImport } from './routes/users'
 
@@ -84,6 +86,16 @@ const ReportsRoute = ReportsRouteImport.update({
   path: '/reports',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SignInRoute = SignInRouteImport.update({
+  id: '/sign-in',
+  path: '/sign-in',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignUpRoute = SignUpRouteImport.update({
+  id: '/sign-up',
+  path: '/sign-up',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TeamAttendanceRoute = TeamAttendanceRouteImport.update({
   id: '/team-attendance',
   path: '/team-attendance',
@@ -108,6 +120,8 @@ export interface FileRoutesByFullPath {
   '/organization': typeof OrganizationRoute
   '/profile': typeof ProfileRoute
   '/reports': typeof ReportsRoute
+  '/sign-in': typeof SignInRoute
+  '/sign-up': typeof SignUpRoute
   '/team-attendance': typeof TeamAttendanceRoute
   '/users': typeof UsersRoute
 }
@@ -124,6 +138,8 @@ export interface FileRoutesByTo {
   '/organization': typeof OrganizationRoute
   '/profile': typeof ProfileRoute
   '/reports': typeof ReportsRoute
+  '/sign-in': typeof SignInRoute
+  '/sign-up': typeof SignUpRoute
   '/team-attendance': typeof TeamAttendanceRoute
   '/users': typeof UsersRoute
 }
@@ -141,6 +157,8 @@ export interface FileRoutesById {
   '/organization': typeof OrganizationRoute
   '/profile': typeof ProfileRoute
   '/reports': typeof ReportsRoute
+  '/sign-in': typeof SignInRoute
+  '/sign-up': typeof SignUpRoute
   '/team-attendance': typeof TeamAttendanceRoute
   '/users': typeof UsersRoute
 }
@@ -159,6 +177,8 @@ export interface FileRouteTypes {
     | '/organization'
     | '/profile'
     | '/reports'
+    | '/sign-in'
+    | '/sign-up'
     | '/team-attendance'
     | '/users'
   fileRoutesByTo: FileRoutesByTo
@@ -175,6 +195,8 @@ export interface FileRouteTypes {
     | '/organization'
     | '/profile'
     | '/reports'
+    | '/sign-in'
+    | '/sign-up'
     | '/team-attendance'
     | '/users'
   id:
@@ -191,6 +213,8 @@ export interface FileRouteTypes {
     | '/organization'
     | '/profile'
     | '/reports'
+    | '/sign-in'
+    | '/sign-up'
     | '/team-attendance'
     | '/users'
   fileRoutesById: FileRoutesById
@@ -208,6 +232,8 @@ export interface RootRouteChildren {
   OrganizationRoute: typeof OrganizationRoute
   ProfileRoute: typeof ProfileRoute
   ReportsRoute: typeof ReportsRoute
+  SignInRoute: typeof SignInRoute
+  SignUpRoute: typeof SignUpRoute
   TeamAttendanceRoute: typeof TeamAttendanceRoute
   UsersRoute: typeof UsersRoute
 }
@@ -298,6 +324,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReportsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sign-in': {
+      id: '/sign-in'
+      path: '/sign-in'
+      fullPath: '/sign-in'
+      preLoaderRoute: typeof SignInRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sign-up': {
+      id: '/sign-up'
+      path: '/sign-up'
+      fullPath: '/sign-up'
+      preLoaderRoute: typeof SignUpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/team-attendance': {
       id: '/team-attendance'
       path: '/team-attendance'
@@ -328,6 +368,8 @@ const rootRouteChildren: RootRouteChildren = {
   OrganizationRoute: OrganizationRoute,
   ProfileRoute: ProfileRoute,
   ReportsRoute: ReportsRoute,
+  SignInRoute: SignInRoute,
+  SignUpRoute: SignUpRoute,
   TeamAttendanceRoute: TeamAttendanceRoute,
   UsersRoute: UsersRoute,
 }
